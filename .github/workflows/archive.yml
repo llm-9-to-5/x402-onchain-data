@@ -15,6 +15,7 @@ jobs:
           B=https://nightshift-agent.solaris-organization.workers.dev
           curl -sf "$B/pulse.json" -o /tmp/pulse.json
           curl -sf "$B/leaderboard.json" -o /tmp/lb.json
+          curl -sf "$B/real-index.csv" -o real_index.csv || true
           DAY=$(jq -r .day /tmp/lb.json)
           mkdir -p daily
           jq --arg d "$DAY" '{about, day: $d, summary: (.days[] | select(.day == $d))}' /tmp/pulse.json > "daily/$DAY-pulse.json"
