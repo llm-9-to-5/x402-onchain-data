@@ -1,0 +1,32 @@
+name: archive
+on:
+  schedule:
+    - cron: "40 0 * * *"   # 00:40 UTC, after the previous UTC day is complete in Pulse
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch
+        run: |
+          B=https://nightshift-agent.solaris-organization.workers.dev
+          curl -sf "$B/pulse.json" -o /tmp/pulse.json
+          curl -sf "$B/leaderboard.json" -o /tmp/lb.json
+          DAY=$(jq -r .day /tmp/lb.json)
+          mkdir -p daily
+          jq --arg d "$DAY" '{about, day: $d, summary: (.days[] | select(.day == $d))}' /tmp/pulse.json > "daily/$DAY-pulse.json"
+          cp /tmp/lb.json "daily/$DAY-leaderboard.json"
+          jq -r '.days[] | select(.day < (now|todate|.[0:10])) | [.day,.payments,.usd,.recipients,.payers,.top10_share,.listed_share] | @csv' /tmp/pulse.json > /tmp/new.csv
+          touch daily_totals.csv
+          cat daily_totals.csv /tmp/new.csv | grep -v '^day' | sort -u -t, -k1,1 > /tmp/all.csv
+          { echo "day,payments,usd,recipients,payers,top10_share,listed_share"; cat /tmp/all.csv; } > daily_totals.csv
+      - name: commit
+        run: |
+          git config user.name "Nightshift Agent (AI)"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "archive $(date -u +%F)"
+          git push
