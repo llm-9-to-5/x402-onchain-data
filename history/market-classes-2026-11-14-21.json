@@ -1,0 +1,303 @@
+{
+ "days": [
+  {
+   "day": "2026-11-14",
+   "usd": 5255.25,
+   "by_class": {
+    "repeat buyers (open)": {
+     "recipients": 8,
+     "usd": 256.26,
+     "wallet_links": 636
+    },
+    "ax1": {
+     "recipients": 1,
+     "usd": 3812.76,
+     "wallet_links": 660
+    },
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 41.1,
+     "wallet_links": 822
+    },
+    "small (<20 wallets)": {
+     "recipients": 1363,
+     "usd": 995.22,
+     "wallet_links": 2545
+    },
+    "mostly new wallets": {
+     "recipients": 10,
+     "usd": 116.97,
+     "wallet_links": 1531
+    },
+    "closed fleet": {
+     "recipients": 2,
+     "usd": 32.95,
+     "wallet_links": 125
+    }
+   }
+  },
+  {
+   "day": "2026-11-15",
+   "usd": 5198.24,
+   "by_class": {
+    "ax1": {
+     "recipients": 1,
+     "usd": 3757.87,
+     "wallet_links": 485
+    },
+    "repeat buyers (open)": {
+     "recipients": 11,
+     "usd": 264.21,
+     "wallet_links": 640
+    },
+    "small (<20 wallets)": {
+     "recipients": 2326,
+     "usd": 991.26,
+     "wallet_links": 3515
+    },
+    "mostly new wallets": {
+     "recipients": 9,
+     "usd": 106.93,
+     "wallet_links": 2737
+    },
+    "one payment per wallet": {
+     "recipients": 2,
+     "usd": 77.85,
+     "wallet_links": 1237
+    },
+    "closed fleet": {
+     "recipients": 1,
+     "usd": 0.12,
+     "wallet_links": 71
+    }
+   }
+  },
+  {
+   "day": "2026-11-16",
+   "usd": 13003.71,
+   "by_class": {
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 40.2,
+     "wallet_links": 804
+    },
+    "ax1": {
+     "recipients": 1,
+     "usd": 11188.46,
+     "wallet_links": 788
+    },
+    "repeat buyers (open)": {
+     "recipients": 15,
+     "usd": 365.82,
+     "wallet_links": 2077
+    },
+    "small (<20 wallets)": {
+     "recipients": 2451,
+     "usd": 1408.49,
+     "wallet_links": 4115
+    },
+    "mostly new wallets": {
+     "recipients": 7,
+     "usd": 0.74,
+     "wallet_links": 206
+    }
+   }
+  },
+  {
+   "day": "2026-11-17",
+   "usd": 3685.08,
+   "by_class": {
+    "ax1": {
+     "recipients": 1,
+     "usd": 1614.02,
+     "wallet_links": 355
+    },
+    "repeat buyers (open)": {
+     "recipients": 12,
+     "usd": 294.6,
+     "wallet_links": 695
+    },
+    "small (<20 wallets)": {
+     "recipients": 2135,
+     "usd": 1563.84,
+     "wallet_links": 3665
+    },
+    "mostly new wallets": {
+     "recipients": 16,
+     "usd": 86.2,
+     "wallet_links": 2456
+    },
+    "one payment per wallet": {
+     "recipients": 2,
+     "usd": 40.74,
+     "wallet_links": 846
+    },
+    "closed fleet": {
+     "recipients": 1,
+     "usd": 85.68,
+     "wallet_links": 345
+    }
+   }
+  },
+  {
+   "day": "2026-11-18",
+   "usd": 3189.13,
+   "by_class": {
+    "mostly new wallets": {
+     "recipients": 12,
+     "usd": 123.22,
+     "wallet_links": 2894
+    },
+    "ax1": {
+     "recipients": 1,
+     "usd": 873.03,
+     "wallet_links": 729
+    },
+    "closed fleet": {
+     "recipients": 3,
+     "usd": 30.57,
+     "wallet_links": 835
+    },
+    "repeat buyers (open)": {
+     "recipients": 9,
+     "usd": 289.39,
+     "wallet_links": 741
+    },
+    "small (<20 wallets)": {
+     "recipients": 1622,
+     "usd": 1827.93,
+     "wallet_links": 3061
+    },
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 45.0,
+     "wallet_links": 900
+    }
+   }
+  },
+  {
+   "day": "2026-11-19",
+   "usd": 4197.9,
+   "by_class": {
+    "small (<20 wallets)": {
+     "recipients": 2025,
+     "usd": 1460.4,
+     "wallet_links": 3570
+    },
+    "ax1": {
+     "recipients": 1,
+     "usd": 2176.21,
+     "wallet_links": 2306
+    },
+    "repeat buyers (open)": {
+     "recipients": 12,
+     "usd": 364.7,
+     "wallet_links": 880
+    },
+    "closed fleet": {
+     "recipients": 2,
+     "usd": 19.59,
+     "wallet_links": 818
+    },
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 41.95,
+     "wallet_links": 839
+    },
+    "mostly new wallets": {
+     "recipients": 12,
+     "usd": 135.05,
+     "wallet_links": 2271
+    }
+   }
+  },
+  {
+   "day": "2026-11-20",
+   "usd": 5021.3,
+   "by_class": {
+    "ax1": {
+     "recipients": 1,
+     "usd": 2771.54,
+     "wallet_links": 2292
+    },
+    "closed fleet": {
+     "recipients": 3,
+     "usd": 214.28,
+     "wallet_links": 1160
+    },
+    "repeat buyers (open)": {
+     "recipients": 10,
+     "usd": 317.18,
+     "wallet_links": 762
+    },
+    "mostly new wallets": {
+     "recipients": 12,
+     "usd": 101.46,
+     "wallet_links": 2059
+    },
+    "small (<20 wallets)": {
+     "recipients": 1777,
+     "usd": 1573.69,
+     "wallet_links": 3055
+    },
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 43.15,
+     "wallet_links": 863
+    }
+   }
+  },
+  {
+   "day": "2026-11-21",
+   "usd": 5113.07,
+   "by_class": {
+    "small (<20 wallets)": {
+     "recipients": 1826,
+     "usd": 1363.28,
+     "wallet_links": 2980
+    },
+    "ax1": {
+     "recipients": 1,
+     "usd": 3195.92,
+     "wallet_links": 3376
+    },
+    "repeat buyers (open)": {
+     "recipients": 11,
+     "usd": 388.18,
+     "wallet_links": 1882
+    },
+    "closed fleet": {
+     "recipients": 3,
+     "usd": 118.27,
+     "wallet_links": 1157
+    },
+    "one payment per wallet": {
+     "recipients": 1,
+     "usd": 44.75,
+     "wallet_links": 895
+    },
+    "mostly new wallets": {
+     "recipients": 7,
+     "usd": 2.67,
+     "wallet_links": 227
+    }
+   }
+  }
+ ],
+ "window": {
+  "files": [
+   "idx_2026-11-13.json",
+   "idx_2026-11-14.json",
+   "idx_2026-11-15.json",
+   "idx_2026-11-16.json",
+   "idx_2026-11-17.json",
+   "idx_2026-11-18.json",
+   "idx_2026-11-19.json",
+   "idx_2026-11-20.json",
+   "idx_2026-11-21.json"
+  ],
+  "wallets": 26225,
+  "paid_2plus_sellers": 3238,
+  "paid_2plus_sellers_excl_ax1": 2579
+ }
+}
