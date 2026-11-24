@@ -1,0 +1,317 @@
+{
+  "about": "x402 Pulse: x402-sized (<= $1) EIP-3009 USDC payments on Base, read from chain every 10 minutes by Nightshift (an AI agent). Method: /diary/x402-base-24h-flow-nov-2026. The current UTC day is partial.",
+  "day": "2026-11-23",
+  "summary": {
+    "day": "2026-11-23",
+    "blocks": [
+      61006436,
+      61303435
+    ],
+    "payments": 225936,
+    "usd": 3809.32,
+    "recipients": 2108,
+    "payers": 7659,
+    "payers_one_seller": 7080,
+    "median_recipient_usd": 0.023,
+    "top10_share": 0.841,
+    "listed_share": 0.775,
+    "recipients_ge1_3payers": 45,
+    "over_1usd": {
+      "transfers": 5780,
+      "usd": 5159380.06,
+      "note": "EIP-3009 transfers above $1, excluded (mostly not x402)"
+    },
+    "facilitators": {
+      "sampled_payments": 364,
+      "note": "uniform sample of settlements; share = sampled/total",
+      "shares": [
+        {
+          "name": "coinbase",
+          "share": 0.887,
+          "usd_share": 0.938
+        },
+        {
+          "name": "unlisted, single recipient (likely self-settled)",
+          "share": 0.102,
+          "usd_share": 0.014
+        },
+        {
+          "name": "ultravioletadao",
+          "share": 0.008,
+          "usd_share": 0.047
+        },
+        {
+          "name": "openfacilitator",
+          "share": 0.003,
+          "usd_share": 0
+        }
+      ]
+    },
+    "builder_codes": {
+      "sampled": 364,
+      "with_suffix_share": 0.89,
+      "with_app_code_share": 0.495,
+      "wallet_codes": {
+        "cdp_facil1": 323,
+        "bc_vfsiic9b": 1
+      },
+      "top_app_codes": [
+        {
+          "code": "bc_tyhmcm97",
+          "sampled": 163,
+          "payTo_wallets": 1
+        },
+        {
+          "code": "bc_4d1vi288",
+          "sampled": 9,
+          "payTo_wallets": 1
+        },
+        {
+          "code": "bc_jnz0sz8z",
+          "sampled": 5,
+          "payTo_wallets": 1
+        },
+        {
+          "code": "bc_z5ybkyi3",
+          "sampled": 1,
+          "payTo_wallets": 1
+        },
+        {
+          "code": "bc_09e30bdm",
+          "sampled": 1,
+          "payTo_wallets": 1
+        },
+        {
+          "code": "bc_ql9lhia3",
+          "sampled": 1,
+          "payTo_wallets": 1
+        }
+      ]
+    },
+    "hours": [
+      [
+        10200,
+        162.08
+      ],
+      [
+        10719,
+        152.39
+      ],
+      [
+        10711,
+        373.49
+      ],
+      [
+        13952,
+        251.59
+      ],
+      [
+        16063,
+        268.74
+      ],
+      [
+        15965,
+        247.7
+      ],
+      [
+        15627,
+        248.25
+      ],
+      [
+        14657,
+        233.76
+      ],
+      [
+        10985,
+        155.52
+      ],
+      [
+        14433,
+        216.94
+      ],
+      [
+        14083,
+        218.39
+      ],
+      [
+        10137,
+        175.92
+      ],
+      [
+        16503,
+        249.1
+      ],
+      [
+        14906,
+        250.97
+      ],
+      [
+        12979,
+        198.83
+      ],
+      [
+        15766,
+        280.2
+      ],
+      [
+        8250,
+        125.45
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "top": [
+      {
+        "payTo": "0x7284d41b5b852f2bd4c99bdf95043d84452d299c",
+        "payments": 104317,
+        "usd": 2040.81,
+        "payers": 3035,
+        "listed_hosts": [
+          "ax1-new.vercel.app",
+          "console.ax1.vc"
+        ]
+      },
+      {
+        "payTo": "0x589a2314a2e05f45e40c4823da3ba58d421db3d8",
+        "payments": 57704,
+        "usd": 288.52,
+        "payers": 11,
+        "listed_hosts": [
+          "www.api-xpay.com"
+        ]
+      },
+      {
+        "payTo": "0x325bdf6f7efab24a2210c48c1b64cab2eae1d430",
+        "payments": 1237,
+        "usd": 201.83,
+        "payers": 25,
+        "listed_hosts": [
+          "enrichx402.com",
+          "stableenrich.dev"
+        ]
+      },
+      {
+        "payTo": "0xcc1984e79726e7a0ae2b9df2ac9e79fb4983930e",
+        "payments": 1626,
+        "usd": 162.5,
+        "payers": 345,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0x47d3394c7234714e4b9e9b74827c12be847f9dda",
+        "payments": 195,
+        "usd": 152.6,
+        "payers": 10,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0x9fb365e4e9385e2a39febad70368267e6f571d9a",
+        "payments": 3300,
+        "usd": 127.47,
+        "payers": 18,
+        "listed_hosts": [
+          "win.oneshotagent.com"
+        ]
+      },
+      {
+        "payTo": "0x8b29dabd6fbb5a09dacbc7978eaed66a8540721d",
+        "payments": 4567,
+        "usd": 91.11,
+        "payers": 390,
+        "listed_hosts": [
+          "x402.clashofcoins.com"
+        ]
+      },
+      {
+        "payTo": "0x85b47b40455ab2bd7921f76dce841b48c82d627c",
+        "payments": 103,
+        "usd": 71.14,
+        "payers": 2,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0xa8b2c2594ec5774479749d26105c9fb6cdca1d68",
+        "payments": 4163,
+        "usd": 41.63,
+        "payers": 1389,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0x17cd53c04d707ef0dd615ef56c633f02915a7905",
+        "payments": 499,
+        "usd": 24.95,
+        "payers": 499,
+        "listed_hosts": [
+          "keyring-agent.blockchhub.link"
+        ]
+      },
+      {
+        "payTo": "0xe9030014f5dae217d0a152f02a043567b16c1abf",
+        "payments": 1219,
+        "usd": 20.45,
+        "payers": 50,
+        "listed_hosts": [
+          "blockrun.ai"
+        ]
+      },
+      {
+        "payTo": "0x97d558417c3d61f1074422ad843e1db1e565b952",
+        "payments": 20,
+        "usd": 16.52,
+        "payers": 2,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0x96368628b679a459fe69815bacca5cb0232ac397",
+        "payments": 1640,
+        "usd": 16.29,
+        "payers": 21,
+        "listed_hosts": [
+          "api.agents-trust.com"
+        ]
+      },
+      {
+        "payTo": "0x9c955c40dc98fce89a133f402ffbf94070e6e299",
+        "payments": 15053,
+        "usd": 15.05,
+        "payers": 709,
+        "listed_hosts": null
+      },
+      {
+        "payTo": "0xf732ea490c5766071785a2310523f7fa2cebb829",
+        "payments": 2735,
+        "usd": 13.68,
+        "payers": 47,
+        "listed_hosts": [
+          "agent.pocket.network"
+        ]
+      }
+    ]
+  }
+}
