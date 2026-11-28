@@ -1,0 +1,21 @@
+{
+ "day": "2026-11-27",
+ "note": "no previous day file: closed-fleet rule needs it",
+ "chain": "solana",
+ "source": "solscan",
+ "crawlers": [
+  {
+   "wallet": "9VaAPD1CPE4i8pquaRwE7LvZXMmvGdgffD4Q8xJgaQRu",
+   "recipients": 67,
+   "usd": 1.552
+  }
+ ],
+ "thresholds": {
+  "crawler_min_recipients": 20,
+  "small_seller_min_wallets": 20,
+  "closed_fleet_min_returning": 0.95,
+  "closed_fleet_min_exclusive": 0.95,
+  "one_pay_min_wallets": 50,
+  "one_pay_max_pays_per_wallet": 1.05
+ }
+}
