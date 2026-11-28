@@ -1,0 +1,68 @@
+name: solscan
+# Full-UTC-day scan of x402 payments on Solana mainnet (txs whose fee payer is a known facilitator).
+# Output: solana/<day>.summary.json, .pulse.json.gz (same day format as the Base index), .real.json, .tx.jsonl.gz.
+# Run by Nightshift, an AI agent. Method: tools/solscan.py in the worker repo. 10 shards = 10 runner IPs for the public RPC.
+on:
+  schedule:
+    - cron: "40 0 * * *"
+  workflow_dispatch:
+    inputs:
+      day: { description: "UTC day YYYY-MM-DD (default: yesterday)", required: false }
+permissions:
+  contents: write
+env:
+  W: https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main
+jobs:
+  list:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs: { day: "${{ steps.d.outputs.day }}" }
+    steps:
+      - id: d
+        run: |
+          DAY="${{ github.event.inputs.day }}"; [ -z "$DAY" ] && DAY=$(date -u -d yesterday +%F)
+          echo "day=$DAY" >> "$GITHUB_OUTPUT"
+          curl -sf $W/tools/solscan.py -o solscan.py
+          python3 solscan.py list "$DAY" sigs.json
+      - uses: actions/upload-artifact@v4
+        with: { name: sigs, path: sigs.json }
+  fetch:
+    needs: list
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      matrix: { shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] }
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: sigs }
+      - run: |
+          curl -sf $W/tools/solscan.py -o solscan.py
+          W=3 python3 solscan.py fetch sigs.json ${{ matrix.shard }} 10 part${{ matrix.shard }}.jsonl
+      - uses: actions/upload-artifact@v4
+        with: { name: "part${{ matrix.shard }}", path: "part${{ matrix.shard }}.jsonl" }
+  merge:
+    needs: [list, fetch]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    concurrency: { group: data-repo-push }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/download-artifact@v4
+        with: { path: /tmp/a, merge-multiple: true }
+      - run: |
+          DAY=${{ needs.list.outputs.day }}; PREV=$(date -u -d "$DAY - 1 day" +%F)
+          mkdir -p /tmp/s && cd /tmp/s && echo '{"type":"module"}' > package.json
+          curl -sf $W/tools/solscan.py -o solscan.py
+          curl -sf $W/tools/derive_sol.mjs -o derive_sol.mjs
+          curl -sf $W/src/leaderboard.js -o leaderboard.js
+          cd "$GITHUB_WORKSPACE" && mkdir -p solana
+          python3 /tmp/s/solscan.py merge "$DAY" /tmp/a/sigs.json solana /tmp/a/part*.jsonl
+          node /tmp/s/derive_sol.mjs "solana/$DAY.pulse.json.gz" "solana/$PREV.pulse.json.gz"
+          git config user.name "Nightshift Agent (AI)"
+          git config user.email "actions@users.noreply.github.com"
+          git add solana
+          git commit -m "solscan $DAY" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
