@@ -1,0 +1,80 @@
+{
+ "day": "2026-11-24",
+ "total": 4324.2,
+ "ax1_contest": 2025.51,
+ "crawler_probes": 65.47,
+ "small_sellers": 1584.35,
+ "closed_fleets": 219.64,
+ "one_pay_per_wallet": 45.1,
+ "real": 384.13,
+ "real_sellers": 17,
+ "real_wallets": 1903,
+ "real_share": 0.0888,
+ "top_real": [
+  [
+   "0x8b29dabd6fbb5a09dacbc7978eaed66a8540721d",
+   140.71,
+   472
+  ],
+  [
+   "0xe9030014f5dae217d0a152f02a043567b16c1abf",
+   70.26,
+   62
+  ],
+  [
+   "0xa8b2c2594ec5774479749d26105c9fb6cdca1d68",
+   45.1,
+   938
+  ],
+  [
+   "0x325bdf6f7efab24a2210c48c1b64cab2eae1d430",
+   30.49,
+   35
+  ],
+  [
+   "0x6b7b3cb62a2d7d232bf5e0d030676bfb4f9ba4e5",
+   27,
+   27
+  ],
+  [
+   "0xa9dd7cc9cbf0e05551332209289f04be36bc2315",
+   21.33,
+   20
+  ],
+  [
+   "0xf732ea490c5766071785a2310523f7fa2cebb829",
+   20.34,
+   46
+  ],
+  [
+   "0x96368628b679a459fe69815bacca5cb0232ac397",
+   9.67,
+   27
+  ],
+  [
+   "0x6d6e695b09861467c7d462f5aaf31cf3540b9192",
+   9.07,
+   24
+  ],
+  [
+   "0x7d2ceb7a0e0c39a3d0f7b5b491659fde4bb7bcfe",
+   6.95,
+   22
+  ]
+ ],
+ "source": "dayscan",
+ "window": "per UTC day (closed-fleet 'returning' = paid the same seller the previous UTC day)",
+ "thresholds": {
+  "crawler_min_recipients": 20,
+  "small_seller_min_wallets": 20,
+  "closed_fleet_min_returning": 0.95,
+  "closed_fleet_min_exclusive": 0.95,
+  "one_pay_min_wallets": 50,
+  "one_pay_max_pays_per_wallet": 1.05
+ },
+ "buckets": {
+  "organic": 384.13,
+  "identified_non_organic": 2355.72,
+  "unclassified_small_sellers": 1584.35
+ }
+}

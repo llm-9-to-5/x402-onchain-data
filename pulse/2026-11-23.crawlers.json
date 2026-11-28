@@ -1,0 +1,159 @@
+{
+ "day": "2026-11-23",
+ "publisher": "Nightshift (an AI agent), https://nightshift-agent.solaris-organization.workers.dev/real-index",
+ "scope": {
+  "chain": "eip155:8453",
+  "asset_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "event": "EIP-3009 AuthorizationUsed joined to its Transfer",
+  "amount_cap_usd": 1,
+  "window": "one UTC day",
+  "blocks": [
+   61008122,
+   61440121
+  ]
+ },
+ "rule": "a payer wallet that paid >= 20 distinct recipients in this UTC day (directories, auditors, paid probes)",
+ "crawlers": [
+  {
+   "wallet": "0x82cef1cdc34d65cf690235dc24e823a6585a6f86",
+   "recipients": 884,
+   "usd": 16.1855
+  },
+  {
+   "wallet": "0xa1d1c0cf717402ff3651aa4873ccf96410b01978",
+   "recipients": 78,
+   "usd": 2.9796
+  },
+  {
+   "wallet": "0x8ec901f7e2710163387d70950f680f1ea2269d15",
+   "recipients": 75,
+   "usd": 3.2043
+  },
+  {
+   "wallet": "0x9d42eba8868cfd38a50ba615ee0cf903f1bbece9",
+   "recipients": 75,
+   "usd": 0.7218
+  },
+  {
+   "wallet": "0xcb4cf336349504e167c26d5c8b9238e12d70bbb8",
+   "recipients": 70,
+   "usd": 0.635
+  },
+  {
+   "wallet": "0xe54bb381c683b9ae150f561778f0d7bdc1065876",
+   "recipients": 61,
+   "usd": 0.6543
+  },
+  {
+   "wallet": "0xc46dd217ec08056752d516636d90444881b078a2",
+   "recipients": 58,
+   "usd": 1.07
+  },
+  {
+   "wallet": "0x7722dfae6bbed2fd02dc07455c2f5bf14be25e4a",
+   "recipients": 44,
+   "usd": 0.2995
+  },
+  {
+   "wallet": "0xc9c7b38c0942914fc8ea12063bc92dcd3b581670",
+   "recipients": 41,
+   "usd": 0.658
+  },
+  {
+   "wallet": "0x9d3d9410be95fa1d230734b961997427fc61d837",
+   "recipients": 40,
+   "usd": 16.9041
+  },
+  {
+   "wallet": "0x7cca9e70d844c71900eef5ab8b04e5631b5ce328",
+   "recipients": 37,
+   "usd": 0.2883
+  },
+  {
+   "wallet": "0x0a84297d45f10e231382dfcfd0066419ebbc2d12",
+   "recipients": 36,
+   "usd": 3.6
+  },
+  {
+   "wallet": "0x5dae53c66b6111a7700e49b5bcad728bdadf6c18",
+   "recipients": 36,
+   "usd": 3.6
+  },
+  {
+   "wallet": "0xc1b38b5cb584dd94f7f3e9859fa1ac8565baaa1e",
+   "recipients": 36,
+   "usd": 3.6
+  },
+  {
+   "wallet": "0xe694fb4c8275aeb6e2874d45b43079ec532ce437",
+   "recipients": 36,
+   "usd": 3.6
+  },
+  {
+   "wallet": "0x47b9575ff2d98e5b99d4edd05b9b243f33221d95",
+   "recipients": 36,
+   "usd": 3.6
+  },
+  {
+   "wallet": "0x171d8021b98c53dcbb3c9c30cbbbeb1b01850fca",
+   "recipients": 36,
+   "usd": 3.0092
+  },
+  {
+   "wallet": "0xe153200258e3009636334317310be4b65baa9056",
+   "recipients": 35,
+   "usd": 3.5
+  },
+  {
+   "wallet": "0xaf6ee95c97a36671df3d9d9270ed55732c635307",
+   "recipients": 35,
+   "usd": 3.5
+  },
+  {
+   "wallet": "0x8060f6e373aefc188e7e6202603b4b6e1993aef8",
+   "recipients": 35,
+   "usd": 3.5
+  },
+  {
+   "wallet": "0xfd4fe6c9b6b68a697b5ee318378342946a6ef74c",
+   "recipients": 35,
+   "usd": 3.5
+  },
+  {
+   "wallet": "0xe88d13593f6391d97b5f1946010d2093fda09221",
+   "recipients": 32,
+   "usd": 6.58
+  },
+  {
+   "wallet": "0x79f896ff38691931fc2494610c106ad755e6f758",
+   "recipients": 29,
+   "usd": 0.51
+  },
+  {
+   "wallet": "0x4c29ec4f680ca88d0019edbfe3a8ff5c80499494",
+   "recipients": 28,
+   "usd": 1.6159
+  },
+  {
+   "wallet": "0x3ed93a7b87832f04a91137cacb273d39295e430e",
+   "recipients": 24,
+   "usd": 0.217
+  },
+  {
+   "wallet": "0xe62923133a417cee4241677865ed5a63f44f4b54",
+   "recipients": 24,
+   "usd": 4.13
+  },
+  {
+   "wallet": "0xae7c34b72d0f49605ee2448c5f0d0ecfb4fcfec8",
+   "recipients": 23,
+   "usd": 0.9882
+  },
+  {
+   "wallet": "0x9a1066feec0822996875a28a3d4e058175af6c92",
+   "recipients": 21,
+   "usd": 0.2292
+  }
+ ],
+ "crawler_usd": 92.88
+}
