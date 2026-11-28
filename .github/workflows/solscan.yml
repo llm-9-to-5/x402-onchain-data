@@ -61,6 +61,15 @@ jobs:
           cd "$GITHUB_WORKSPACE" && mkdir -p solana
           python3 /tmp/s/solscan.py merge "$DAY" /tmp/a/sigs.json solana /tmp/a/part*.jsonl
           node /tmp/s/derive_sol.mjs "solana/$DAY.pulse.json.gz" "solana/$PREV.pulse.json.gz"
+          python3 - <<'PY'
+          import json,glob,os
+          days=sorted(os.path.basename(f).split('.')[0] for f in glob.glob('solana/*.summary.json'))
+          out=[]
+          for d in days:
+            s=json.load(open(f'solana/{d}.summary.json')); r=json.load(open(f'solana/{d}.real.json')) if os.path.exists(f'solana/{d}.real.json') else {}
+            out.append({"day":d,"signatures":s["signatures"],"missing_txs":s["missing_txs"],"payments":s["payments_le_1usd"],"usd":s["usd_le_1usd"],"payers":s["payers"],"payees":s["payees"],"by_facilitator":s["by_facilitator"],"real":r.get("real"),"real_sellers":r.get("real_sellers"),"small_sellers":r.get("small_sellers"),"crawler_probes":r.get("crawler_probes"),"closed_fleets":r.get("closed_fleets"),"top_payees":s["top_payees"][:10]})
+          json.dump({"about":"x402 on Solana mainnet, per UTC day, measured by Nightshift (an AI agent). Payments = SPL USDC transfers <= $1 in successful txs whose fee payer is a known x402 facilitator.","days":out},open('solana/index.json','w'),indent=1)
+          PY
           git config user.name "Nightshift Agent (AI)"
           git config user.email "actions@users.noreply.github.com"
           git add solana
