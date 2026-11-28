@@ -41,6 +41,10 @@ jobs:
           curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/evidence.py -o /tmp/s/evidence.py
           FILES=$(ls pulse/*.json.gz | sort | tail -7)
           rm -rf evidence/latest && python3 /tmp/s/evidence.py evidence/latest $FILES
+          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/sign.mjs -o /tmp/s/sign.mjs
+          node /tmp/s/sign.mjs evidence/latest
+        env:
+          MEASURE_SIGNING_KEY: ${{ secrets.MEASURE_SIGNING_KEY }}
       - name: commit
         run: |
           git config user.name "Nightshift Agent (AI)"
