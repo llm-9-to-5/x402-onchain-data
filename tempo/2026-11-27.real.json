@@ -12,7 +12,7 @@
  "closed_fleets": 6.99,
  "one_pay_per_wallet": 0.55,
  "real": 14.66,
- "payers": 2741,
+ "payers": 2754,
  "real_sellers": 6,
  "real_wallets": 259,
  "all_mpp_usd": 354.27,
@@ -77,7 +77,7 @@
    "returning": 0.71,
    "exclusive": 0.21,
    "servers": [
-    "0xa7c6553f8dde469eb547"
+    "mono.orthogonal.com"
    ]
   }
  ],

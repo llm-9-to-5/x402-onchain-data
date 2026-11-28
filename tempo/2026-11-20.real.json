@@ -9,12 +9,12 @@
  "crawler_probes": 28.62,
  "small_sellers": 68.06,
  "round_trip_loops": 65.21,
- "closed_fleets": 0.0,
- "one_pay_per_wallet": 5.14,
- "real": 62.33,
- "payers": 2537,
- "real_sellers": 5,
- "real_wallets": 449,
+ "closed_fleets": 8.38,
+ "one_pay_per_wallet": 0.55,
+ "real": 58.54,
+ "payers": 2548,
+ "real_sellers": 4,
+ "real_wallets": 191,
  "all_mpp_usd": 261.47,
  "non_mpp_memo_transfers": 6042,
  "top_real": [
@@ -22,8 +22,8 @@
    "payTo": "0x3c0820e2dabd5feae1fd03b78079dee15c7f83d8",
    "usd": 46.06,
    "wallets": 24,
-   "returning": null,
-   "exclusive": null,
+   "returning": 0.54,
+   "exclusive": 0.96,
    "servers": [
     "0x200d772b5cacddc2dee0"
    ]
@@ -32,8 +32,8 @@
    "payTo": "0x060b0fb0be9d90557577b3aee480711067149ff0",
    "usd": 11.89,
    "wallets": 144,
-   "returning": null,
-   "exclusive": null,
+   "returning": 0.76,
+   "exclusive": 0.46,
    "servers": [
     "coingecko.mpp.paywithlocus.com",
     "openweather.mpp.paywithlocus.com",
@@ -41,23 +41,11 @@
    ]
   },
   {
-   "payTo": "0x0d509f743bc6fc907d5f63d8b0dae1fca8d80897",
-   "usd": 3.79,
-   "wallets": 258,
-   "returning": null,
-   "exclusive": null,
-   "servers": [
-    "peg.ivan-tempo.xyz",
-    "gas.ivan-tempo.xyz",
-    "id.ivan-tempo.xyz"
-   ]
-  },
-  {
    "payTo": "0x41a802b9022ba48c4b31caa5111f6ee4607b3e08",
    "usd": 0.32,
    "wallets": 24,
-   "returning": null,
-   "exclusive": null,
+   "returning": 0.08,
+   "exclusive": 0.38,
    "servers": [
     "daily-financial-word.vercel.app"
    ]
@@ -66,8 +54,8 @@
    "payTo": "0x440b9265f96f5f81c1ef765016c430f752289559",
    "usd": 0.27,
    "wallets": 27,
-   "returning": null,
-   "exclusive": null,
+   "returning": 0.56,
+   "exclusive": 0.0,
    "servers": [
     "0xeccc0b025c19d40e6093"
    ]
