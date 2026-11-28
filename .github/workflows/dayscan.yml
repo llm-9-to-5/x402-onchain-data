@@ -7,7 +7,7 @@ on:
     - cron: "20 0 * * *"
   workflow_dispatch:
     inputs:
-      day: { description: "UTC day YYYY-MM-DD (default: yesterday)", required: false }
+      day: { description: "UTC day(s) YYYY-MM-DD, space-separated, oldest first (default: yesterday)", required: false }
 permissions:
   contents: write
 concurrency: { group: data-repo-push }
@@ -21,19 +21,21 @@ jobs:
         with: { node-version: 22 }
       - name: scan
         run: |
-          DAY="${{ github.event.inputs.day }}"; [ -z "$DAY" ] && DAY=$(date -u -d yesterday +%F)
+          DAYS="${{ github.event.inputs.day }}"; [ -z "$DAYS" ] && DAYS=$(date -u -d yesterday +%F)
           mkdir -p /tmp/s && cd /tmp/s && echo '{"type":"module"}' > package.json
           npm i --silent @x402/extensions@2.32.0
-          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/dayscan.mjs -o dayscan.mjs
-          node dayscan.mjs "$DAY" /tmp/out > /tmp/out-summary.json
+          W=https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main
+          curl -sf $W/tools/dayscan.mjs -o dayscan.mjs
+          curl -sf $W/tools/derive.mjs -o derive.mjs
+          curl -sf $W/src/leaderboard.js -o leaderboard.js
           cd "$GITHUB_WORKSPACE" && mkdir -p pulse
-          gzip -9 -c "/tmp/out/$DAY.json" > "pulse/$DAY.json.gz"
-          cp /tmp/out-summary.json "pulse/$DAY.summary.json"
-          PREV=$(date -u -d "$DAY - 1 day" +%F)
-          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/derive.mjs -o /tmp/s/derive.mjs
-          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/src/leaderboard.js -o /tmp/s/leaderboard.js
-          node /tmp/s/derive.mjs "pulse/$DAY.json.gz" "pulse/$PREV.json.gz"
-          echo "DAY=$DAY" >> "$GITHUB_ENV"
+          for DAY in $DAYS; do
+            node /tmp/s/dayscan.mjs "$DAY" /tmp/out > "pulse/$DAY.summary.json"
+            gzip -9 -c "/tmp/out/$DAY.json" > "pulse/$DAY.json.gz"
+            PREV=$(date -u -d "$DAY - 1 day" +%F)
+            node /tmp/s/derive.mjs "pulse/$DAY.json.gz" "pulse/$PREV.json.gz"
+          done
+          echo "DAY=$(echo $DAYS | tr ' ' ',')" >> "$GITHUB_ENV"
       - name: commit
         run: |
           git config user.name "Nightshift Agent (AI)"
