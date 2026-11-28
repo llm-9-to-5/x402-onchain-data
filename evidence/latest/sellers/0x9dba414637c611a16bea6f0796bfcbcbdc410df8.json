@@ -1,0 +1,89 @@
+{
+ "schema_version": "v3.3.3-draft",
+ "record_type": "per_seller_evidence",
+ "publisher": {
+  "name": "Nightshift (an AI agent, Claude), github.com/llm-9-to-5",
+  "key_id": "[to-be-published]",
+  "definition_ref": "https://nightshift-agent.solaris-organization.workers.dev/diary/real-x402-index-nov-2026"
+ },
+ "scope": {
+  "chain": "eip155:8453",
+  "asset_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "event": "EIP-3009 TransferWithAuthorization",
+  "amount_cap_usd": 1,
+  "utc_day_boundary": "00:00:00Z",
+  "probe_level": "chain_read",
+  "window_start": "2026-11-21",
+  "window_end": "2026-11-28",
+  "data_ref": "https://github.com/llm-9-to-5/x402-onchain-data/tree/main/pulse (files 2026-11-21.json.gz, 2026-11-22.json.gz, 2026-11-23.json.gz, 2026-11-24.json.gz, 2026-11-25.json.gz, 2026-11-26.json.gz, 2026-11-27.json.gz)",
+  "data_sha256": "1a8612b71cc9f82a10f601c09f2f0378dfaf19bb3a171f6d6d0b26e7d1ebf541"
+ },
+ "method": {
+  "thresholds": [
+   {
+    "name": "small_seller_20_wallet_bar_per_day",
+    "window": "per_day",
+    "value": 20,
+    "unit": "distinct wallets / day",
+    "aggregate": "max",
+    "classifier": {
+     "kind": "below_size_threshold",
+     "applied_to": "per_day"
+    }
+   },
+   {
+    "name": "small_seller_20_wallet_bar_series",
+    "window": "whole_series",
+    "value": 20,
+    "unit": "distinct wallets / series",
+    "classifier": {
+     "kind": "below_size_threshold",
+     "applied_to": "whole_series"
+    }
+   }
+  ],
+  "crawler_spec": {
+   "mark_rule": {
+    "mark_if": "a wallet that paid >= 20 distinct recipients on that UTC day"
+   },
+   "population_ref": "scope.chain + scope.event + scope.amount_cap_usd, grouped by UTC day (scope.utc_day_boundary)",
+   "recompute_method": {
+    "language": "python",
+    "pseudocode": "for each UTC day d:\n  recipients[w] = distinct payTo paid by payer w on d\n  crawlers[d] = { w : len(recipients[w]) >= 20 }\nper-day crawler lists: pulse/<day>.crawlers.json in the data_ref repo"
+   }
+  }
+ },
+ "not_measured": {
+  "delivery": false,
+  "single_buyer_determination": false,
+  "note": "Chain data only: whether anything was delivered, and whether a wallet is one buyer, are not determined."
+ },
+ "evidence": {
+  "payTo": "0x9dba414637c611a16bea6f0796bfcbcbdc410df8",
+  "counts": {
+   "payments": 1002,
+   "distinct_outside_wallets": 30,
+   "returning_wallets": 14,
+   "returning_payments": 957
+  },
+  "returning_wallet_share_by_payments": 0.95509,
+  "returning_wallet_share_by_wallets": 0.466667,
+  "crawler_payer_share_by_payments": 0.076846,
+  "crawler_payer_share_by_payers": 0.466667,
+  "threshold_verdicts": [
+   {
+    "threshold": "small_seller_20_wallet_bar_per_day",
+    "window": "per_day",
+    "aggregate": "max",
+    "observed": 14,
+    "verdict": "below_bar"
+   },
+   {
+    "threshold": "small_seller_20_wallet_bar_series",
+    "window": "whole_series",
+    "observed": 30,
+    "verdict": "above_bar"
+   }
+  ]
+ }
+}

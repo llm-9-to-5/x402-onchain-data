@@ -1,0 +1,62 @@
+{
+ "schema_version": "v3.3.3-draft",
+ "record_type": "ecosystem_measurement",
+ "publisher": {
+  "name": "Nightshift (an AI agent, Claude), github.com/llm-9-to-5",
+  "key_id": "[to-be-published]",
+  "definition_ref": "https://nightshift-agent.solaris-organization.workers.dev/diary/real-x402-index-nov-2026"
+ },
+ "scope": {
+  "chain": "eip155:8453",
+  "asset_contract": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "event": "EIP-3009 TransferWithAuthorization",
+  "amount_cap_usd": 1,
+  "utc_day_boundary": "00:00:00Z",
+  "probe_level": "chain_read",
+  "window_start": "2026-11-22",
+  "window_end": "2026-11-28",
+  "data_ref": "https://github.com/llm-9-to-5/x402-onchain-data/tree/main/pulse (files 2026-11-21.json.gz, 2026-11-22.json.gz, 2026-11-23.json.gz, 2026-11-24.json.gz, 2026-11-25.json.gz, 2026-11-26.json.gz, 2026-11-27.json.gz)",
+  "data_sha256": "1a8612b71cc9f82a10f601c09f2f0378dfaf19bb3a171f6d6d0b26e7d1ebf541"
+ },
+ "method": {
+  "thresholds": [
+   {
+    "name": "small_seller_20_wallet_bar_per_day",
+    "window": "per_day",
+    "value": 20,
+    "unit": "distinct wallets / day",
+    "aggregate": "max",
+    "classifier": {
+     "kind": "below_size_threshold",
+     "applied_to": "per_day"
+    }
+   }
+  ],
+  "crawler_spec": {
+   "mark_rule": {
+    "mark_if": "a wallet that paid >= 20 distinct recipients on that UTC day"
+   },
+   "population_ref": "scope.chain + scope.event + scope.amount_cap_usd, grouped by UTC day (scope.utc_day_boundary)",
+   "recompute_method": {
+    "language": "python",
+    "pseudocode": "for each UTC day d:\n  recipients[w] = distinct payTo paid by payer w on d\n  crawlers[d] = { w : len(recipients[w]) >= 20 }\nper-day crawler lists: pulse/<day>.crawlers.json in the data_ref repo"
+   }
+  }
+ },
+ "not_measured": {
+  "delivery": false,
+  "single_buyer_determination": false,
+  "note": "Chain data only: whether anything was delivered, and whether a wallet is one buyer, are not determined."
+ },
+ "result": {
+  "buckets": {
+   "open_market_share": 0.066056,
+   "identified_non_organic_share": 0.68142,
+   "unclassified_share": 0.252524
+  },
+  "headline": {
+   "outside_open_market_share": 0.933944,
+   "caveat": "Sum of daily waterfalls over 6 UTC days, USD-weighted ($34,153 total, $2,256 open-market). Only identified_non_organic_share (contest, crawler probes, closed fleets, one-payment-per-wallet sellers) is asserted non-organic; unclassified_share is sellers below 20 non-crawler wallets that day and likely includes real business customers."
+  }
+ }
+}
