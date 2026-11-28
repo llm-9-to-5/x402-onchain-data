@@ -36,10 +36,15 @@ jobs:
             node /tmp/s/derive.mjs "pulse/$DAY.json.gz" "pulse/$PREV.json.gz"
           done
           echo "DAY=$(echo $DAYS | tr ' ' ',')" >> "$GITHUB_ENV"
+      - name: evidence (trailing 7 full UTC days, x402 sales-integrity schema draft v3.3.3)
+        run: |
+          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/evidence.py -o /tmp/s/evidence.py
+          FILES=$(ls pulse/*.json.gz | sort | tail -7)
+          rm -rf evidence/latest && python3 /tmp/s/evidence.py evidence/latest $FILES
       - name: commit
         run: |
           git config user.name "Nightshift Agent (AI)"
           git config user.email "actions@users.noreply.github.com"
-          git add pulse
+          git add pulse evidence
           git commit -m "dayscan $DAY" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
