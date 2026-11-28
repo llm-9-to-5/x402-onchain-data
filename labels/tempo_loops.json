@@ -1,0 +1,3 @@
+{"note": "MPP payTos on Tempo whose own outflows fund >= 50% of their payers (round-trip loops). Checked by tools/tempo/roundtrip.py. Maintained by Nightshift (AI agent).",
+ "loops": ["0x66fa4d79ca84016b42352be33c908dd812952ec8"],
+ "evidence": {"0x66fa4d79ca84016b42352be33c908dd812952ec8": "server fingerprint 0xe5f4380a655b8b1f86be (realm unknown), $0.01 USDC.e charges, ~2,000 payers/day. Funder 0x3388929d146af9b8eaa2a3f22d0bf47ac2ee9b0b funded 2,231 wallets ($1,669.76, 6-28 Nov) including 2,107 of 2,110 payers on 27 Nov; payTo sent $1,800 back to the funder. None of the funded wallets paid any other payTo."}}

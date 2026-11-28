@@ -1,0 +1,109 @@
+{
+ "days": {
+  "2026-11-20": {
+   "total": 229.36,
+   "crawler_probes": 28.62,
+   "small_sellers": 68.06,
+   "round_trip_loops": 65.21,
+   "closed_fleets": 0.0,
+   "one_pay_per_wallet": 5.14,
+   "real": 62.33,
+   "payers": 2537,
+   "real_sellers": 5,
+   "real_wallets": 449,
+   "all_mpp_usd": 261.47
+  },
+  "2026-11-21": {
+   "total": 149.97,
+   "crawler_probes": 0.0,
+   "small_sellers": 40.99,
+   "round_trip_loops": 76.82,
+   "closed_fleets": 4.59,
+   "one_pay_per_wallet": 0.55,
+   "real": 27.01,
+   "payers": 2660,
+   "real_sellers": 5,
+   "real_wallets": 442,
+   "all_mpp_usd": 166.97
+  },
+  "2026-11-22": {
+   "total": 182.01,
+   "crawler_probes": 0.0,
+   "small_sellers": 39.93,
+   "round_trip_loops": 73.67,
+   "closed_fleets": 8.35,
+   "one_pay_per_wallet": 0.55,
+   "real": 59.51,
+   "payers": 2678,
+   "real_sellers": 4,
+   "real_wallets": 184,
+   "all_mpp_usd": 713.51
+  },
+  "2026-11-23": {
+   "total": 244.78,
+   "crawler_probes": 51.34,
+   "small_sellers": 71.75,
+   "round_trip_loops": 76.27,
+   "closed_fleets": 7.98,
+   "one_pay_per_wallet": 0.55,
+   "real": 36.89,
+   "payers": 2778,
+   "real_sellers": 3,
+   "real_wallets": 210,
+   "all_mpp_usd": 299.14
+  },
+  "2026-11-24": {
+   "total": 223.26,
+   "crawler_probes": 0.0,
+   "small_sellers": 93.44,
+   "round_trip_loops": 71.06,
+   "closed_fleets": 3.96,
+   "one_pay_per_wallet": 0.55,
+   "real": 54.25,
+   "payers": 2769,
+   "real_sellers": 5,
+   "real_wallets": 499,
+   "all_mpp_usd": 521.59
+  },
+  "2026-11-25": {
+   "total": 603.83,
+   "crawler_probes": 0.0,
+   "small_sellers": 489.26,
+   "round_trip_loops": 64.99,
+   "closed_fleets": 7.53,
+   "one_pay_per_wallet": 0.55,
+   "real": 41.5,
+   "payers": 2660,
+   "real_sellers": 5,
+   "real_wallets": 301,
+   "all_mpp_usd": 694.33
+  },
+  "2026-11-26": {
+   "total": 183.13,
+   "crawler_probes": 0.0,
+   "small_sellers": 83.87,
+   "round_trip_loops": 68.82,
+   "closed_fleets": 5.3,
+   "one_pay_per_wallet": 0.55,
+   "real": 24.6,
+   "payers": 2525,
+   "real_sellers": 4,
+   "real_wallets": 225,
+   "all_mpp_usd": 291.63
+  },
+  "2026-11-27": {
+   "total": 193.62,
+   "crawler_probes": 9.64,
+   "small_sellers": 80.18,
+   "round_trip_loops": 81.6,
+   "closed_fleets": 6.99,
+   "one_pay_per_wallet": 0.55,
+   "real": 14.66,
+   "payers": 2741,
+   "real_sellers": 6,
+   "real_wallets": 259,
+   "all_mpp_usd": 354.27
+  }
+ },
+ "updated": "2026-11-28T14:27:05Z"
+}

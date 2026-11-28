@@ -1,0 +1,77 @@
+{
+ "day": "2026-11-24",
+ "chain": "tempo",
+ "blocks": [
+  50506095,
+  50666221
+ ],
+ "total": 223.26,
+ "crawler_probes": 0.0,
+ "small_sellers": 93.44,
+ "round_trip_loops": 71.06,
+ "closed_fleets": 3.96,
+ "one_pay_per_wallet": 0.55,
+ "real": 54.25,
+ "payers": 2769,
+ "real_sellers": 5,
+ "real_wallets": 499,
+ "all_mpp_usd": 521.59,
+ "non_mpp_memo_transfers": 4895,
+ "top_real": [
+  {
+   "payTo": "0x3c0820e2dabd5feae1fd03b78079dee15c7f83d8",
+   "usd": 36.93,
+   "wallets": 76,
+   "returning": 0.55,
+   "exclusive": 0.99,
+   "servers": [
+    "0x200d772b5cacddc2dee0"
+   ]
+  },
+  {
+   "payTo": "0x060b0fb0be9d90557577b3aee480711067149ff0",
+   "usd": 12.81,
+   "wallets": 138,
+   "returning": 0.76,
+   "exclusive": 0.41,
+   "servers": [
+    "coingecko.mpp.paywithlocus.com",
+    "openweather.mpp.paywithlocus.com",
+    "brave.mpp.paywithlocus.com"
+   ]
+  },
+  {
+   "payTo": "0x0d509f743bc6fc907d5f63d8b0dae1fca8d80897",
+   "usd": 3.88,
+   "wallets": 270,
+   "returning": 0.93,
+   "exclusive": 0.98,
+   "servers": [
+    "gas.ivan-tempo.xyz",
+    "peg.ivan-tempo.xyz",
+    "id.ivan-tempo.xyz"
+   ]
+  },
+  {
+   "payTo": "0x440b9265f96f5f81c1ef765016c430f752289559",
+   "usd": 0.38,
+   "wallets": 38,
+   "returning": 0.37,
+   "exclusive": 0.0,
+   "servers": [
+    "0xeccc0b025c19d40e6093"
+   ]
+  },
+  {
+   "payTo": "0x41a802b9022ba48c4b31caa5111f6ee4607b3e08",
+   "usd": 0.25,
+   "wallets": 20,
+   "returning": 0.0,
+   "exclusive": 0.15,
+   "servers": [
+    "daily-financial-word.vercel.app"
+   ]
+  }
+ ],
+ "method": "https://github.com/llm-9-to-5/nightshift-x402-worker/tree/main/tools/tempo"
+}

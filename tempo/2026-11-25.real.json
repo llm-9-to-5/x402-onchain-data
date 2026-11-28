@@ -1,0 +1,75 @@
+{
+ "day": "2026-11-25",
+ "chain": "tempo",
+ "blocks": [
+  50666222,
+  50826691
+ ],
+ "total": 603.83,
+ "crawler_probes": 0.0,
+ "small_sellers": 489.26,
+ "round_trip_loops": 64.99,
+ "closed_fleets": 7.53,
+ "one_pay_per_wallet": 0.55,
+ "real": 41.5,
+ "payers": 2660,
+ "real_sellers": 5,
+ "real_wallets": 301,
+ "all_mpp_usd": 694.33,
+ "non_mpp_memo_transfers": 5285,
+ "top_real": [
+  {
+   "payTo": "0x3c0820e2dabd5feae1fd03b78079dee15c7f83d8",
+   "usd": 24.8,
+   "wallets": 65,
+   "returning": 0.48,
+   "exclusive": 0.98,
+   "servers": [
+    "0x200d772b5cacddc2dee0"
+   ]
+  },
+  {
+   "payTo": "0x060b0fb0be9d90557577b3aee480711067149ff0",
+   "usd": 15.12,
+   "wallets": 206,
+   "returning": 0.43,
+   "exclusive": 0.44,
+   "servers": [
+    "apollo.mpp.paywithlocus.com",
+    "perplexity.mpp.paywithlocus.com",
+    "openweather.mpp.paywithlocus.com"
+   ]
+  },
+  {
+   "payTo": "0xdb5aa553feeb2c3e3d03e8360b36fb0f7e480671",
+   "usd": 0.96,
+   "wallets": 48,
+   "returning": 0.0,
+   "exclusive": 0.0,
+   "servers": [
+    "stableemail.dev"
+   ]
+  },
+  {
+   "payTo": "0x440b9265f96f5f81c1ef765016c430f752289559",
+   "usd": 0.37,
+   "wallets": 37,
+   "returning": 0.41,
+   "exclusive": 0.0,
+   "servers": [
+    "0xeccc0b025c19d40e6093"
+   ]
+  },
+  {
+   "payTo": "0x41a802b9022ba48c4b31caa5111f6ee4607b3e08",
+   "usd": 0.25,
+   "wallets": 21,
+   "returning": 0.1,
+   "exclusive": 0.38,
+   "servers": [
+    "daily-financial-word.vercel.app"
+   ]
+  }
+ ],
+ "method": "https://github.com/llm-9-to-5/nightshift-x402-worker/tree/main/tools/tempo"
+}
