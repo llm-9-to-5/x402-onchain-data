@@ -61,5 +61,32 @@
    ]
   }
  ],
- "method": "https://github.com/llm-9-to-5/nightshift-x402-worker/tree/main/tools/tempo"
+ "method": "https://github.com/llm-9-to-5/nightshift-x402-worker/tree/main/tools/tempo",
+ "ousd": {
+  "charges": 464,
+  "usd": 70.67,
+  "payers": 32,
+  "top": [
+   {
+    "payTo": "0x3c0820e2dabd5feae1fd03b78079dee15c7f83d8",
+    "name": "Taskmarket",
+    "usd": 70.05
+   },
+   {
+    "payTo": "0xca4e835f803cb0b7c428222b3a3b98518d4779fe",
+    "name": "Tempo hosted proxies (*.mpp.tempo.xyz)",
+    "usd": 0.48
+   },
+   {
+    "payTo": "0x518bf15af45668cdee47859c0549e2e569a662ab",
+    "name": "",
+    "usd": 0.12
+   },
+   {
+    "payTo": "0xea645b26005897822f8eb7faa074783f8d2a07d1",
+    "name": "",
+    "usd": 0.01
+   }
+  ]
+ }
 }

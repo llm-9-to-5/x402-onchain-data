@@ -11,7 +11,12 @@
    "payers": 2634,
    "real_sellers": 5,
    "real_wallets": 474,
-   "all_mpp_usd": 279.51
+   "all_mpp_usd": 279.51,
+   "ousd": {
+    "charges": 474,
+    "usd": 55.76,
+    "payers": 34
+   }
   },
   "2026-11-20": {
    "total": 229.36,
@@ -24,7 +29,12 @@
    "payers": 2548,
    "real_sellers": 4,
    "real_wallets": 191,
-   "all_mpp_usd": 261.47
+   "all_mpp_usd": 261.47,
+   "ousd": {
+    "charges": 464,
+    "usd": 70.67,
+    "payers": 32
+   }
   },
   "2026-11-21": {
    "total": 149.97,
@@ -37,7 +47,12 @@
    "payers": 2669,
    "real_sellers": 5,
    "real_wallets": 442,
-   "all_mpp_usd": 166.97
+   "all_mpp_usd": 166.97,
+   "ousd": {
+    "charges": 524,
+    "usd": 24.63,
+    "payers": 33
+   }
   },
   "2026-11-22": {
    "total": 182.01,
@@ -50,7 +65,12 @@
    "payers": 2691,
    "real_sellers": 4,
    "real_wallets": 184,
-   "all_mpp_usd": 713.51
+   "all_mpp_usd": 713.51,
+   "ousd": {
+    "charges": 616,
+    "usd": 581.62,
+    "payers": 37
+   }
   },
   "2026-11-23": {
    "total": 244.78,
@@ -63,7 +83,12 @@
    "payers": 2786,
    "real_sellers": 3,
    "real_wallets": 210,
-   "all_mpp_usd": 299.14
+   "all_mpp_usd": 299.14,
+   "ousd": {
+    "charges": 769,
+    "usd": 65.23,
+    "payers": 78
+   }
   },
   "2026-11-24": {
    "total": 223.26,
@@ -76,7 +101,12 @@
    "payers": 2778,
    "real_sellers": 5,
    "real_wallets": 499,
-   "all_mpp_usd": 521.59
+   "all_mpp_usd": 521.59,
+   "ousd": {
+    "charges": 824,
+    "usd": 346.04,
+    "payers": 84
+   }
   },
   "2026-11-25": {
    "total": 603.83,
@@ -89,7 +119,12 @@
    "payers": 2669,
    "real_sellers": 5,
    "real_wallets": 301,
-   "all_mpp_usd": 694.33
+   "all_mpp_usd": 694.33,
+   "ousd": {
+    "charges": 1974,
+    "usd": 487.18,
+    "payers": 76
+   }
   },
   "2026-11-26": {
    "total": 183.13,
@@ -102,7 +137,12 @@
    "payers": 2535,
    "real_sellers": 4,
    "real_wallets": 225,
-   "all_mpp_usd": 291.63
+   "all_mpp_usd": 291.63,
+   "ousd": {
+    "charges": 1432,
+    "usd": 154.75,
+    "payers": 61
+   }
   },
   "2026-11-27": {
    "total": 193.62,
@@ -115,8 +155,13 @@
    "payers": 2754,
    "real_sellers": 6,
    "real_wallets": 259,
-   "all_mpp_usd": 354.27
+   "all_mpp_usd": 354.27,
+   "ousd": {
+    "charges": 1188,
+    "usd": 166.7,
+    "payers": 62
+   }
   }
  },
- "updated": "2026-11-28T14:44:11Z"
+ "updated": "2026-11-28T15:15:26Z"
 }
