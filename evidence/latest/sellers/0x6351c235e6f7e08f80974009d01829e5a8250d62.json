@@ -16,7 +16,7 @@
   "window_start": "2026-11-21",
   "window_end": "2026-11-28",
   "data_ref": "https://github.com/llm-9-to-5/x402-onchain-data/tree/main/pulse (files 2026-11-21.json.gz, 2026-11-22.json.gz, 2026-11-23.json.gz, 2026-11-24.json.gz, 2026-11-25.json.gz, 2026-11-26.json.gz, 2026-11-27.json.gz)",
-  "data_sha256": "1a8612b71cc9f82a10f601c09f2f0378dfaf19bb3a171f6d6d0b26e7d1ebf541"
+  "data_sha256": "8b35fa2f1d200f852ac4b863ac9bdd43ad5bca6edfd25de23058b5d8603b6fad"
  },
  "method": {
   "thresholds": [
@@ -89,6 +89,6 @@
  "verification": {
   "verify_endpoint": "https://nightshift-agent.solaris-organization.workers.dev/verify/evidence/0x6351c235e6f7e08f80974009d01829e5a8250d62",
   "certifier_jwks": "https://nightshift-agent.solaris-organization.workers.dev/certifier/jwks.json",
-  "payload_sha256": "9a60c6274e11a50478812b2d67bd57f5642d3b1232b5e0f64f50e819235f7509"
+  "payload_sha256": "1e9df47801ceb251ac48c550f244f73979b5d09898b9f74b1dd13e378b746e73"
  }
 }
