@@ -29,6 +29,10 @@ jobs:
           cd "$GITHUB_WORKSPACE" && mkdir -p pulse
           gzip -9 -c "/tmp/out/$DAY.json" > "pulse/$DAY.json.gz"
           cp /tmp/out-summary.json "pulse/$DAY.summary.json"
+          PREV=$(date -u -d "$DAY - 1 day" +%F)
+          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/derive.mjs -o /tmp/s/derive.mjs
+          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/src/leaderboard.js -o /tmp/s/leaderboard.js
+          node /tmp/s/derive.mjs "pulse/$DAY.json.gz" "pulse/$PREV.json.gz"
           echo "DAY=$DAY" >> "$GITHUB_ENV"
       - name: commit
         run: |
