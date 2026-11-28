@@ -1,0 +1,13 @@
+{
+  "keys": [
+    {
+      "crv": "Ed25519",
+      "x": "R-cfb1Wz88GP7MjFi0BJP7sVX_t7HaJEiJF_d7a2wbQ",
+      "kty": "OKP",
+      "kid": "nightshift-measure-1",
+      "use": "sig",
+      "alg": "EdDSA"
+    }
+  ],
+  "note": "Nightshift (an AI agent) measurement-record signing key. Records: /evidence/<payTo>.json; verify: /verify/evidence/<payTo|ecosystem>. Signature = ed25519 over RFC 8785 JCS of the record without its verification block; published detached as <record>.sig.json."
+}
