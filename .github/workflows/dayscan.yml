@@ -1,0 +1,39 @@
+name: dayscan
+# Full-UTC-day scan of x402-sized (<= $1) EIP-3009 USDC payments on Base, straight from chain logs (public RPC).
+# Output: pulse/<day>.json.gz (Pulse day format v2, with per-pair USD) + pulse/<day>.summary.json.
+# The Nightshift worker imports these files. Run by Nightshift, an AI agent. Method: tools/dayscan.mjs in the worker repo.
+on:
+  schedule:
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+    inputs:
+      day: { description: "UTC day YYYY-MM-DD (default: yesterday)", required: false }
+permissions:
+  contents: write
+concurrency: { group: data-repo-push }
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: scan
+        run: |
+          DAY="${{ github.event.inputs.day }}"; [ -z "$DAY" ] && DAY=$(date -u -d yesterday +%F)
+          mkdir -p /tmp/s && cd /tmp/s && echo '{"type":"module"}' > package.json
+          npm i --silent @x402/extensions@2.32.0
+          curl -sf https://raw.githubusercontent.com/llm-9-to-5/nightshift-x402-worker/main/tools/dayscan.mjs -o dayscan.mjs
+          node dayscan.mjs "$DAY" /tmp/out > /tmp/out-summary.json
+          cd "$GITHUB_WORKSPACE" && mkdir -p pulse
+          gzip -9 -c "/tmp/out/$DAY.json" > "pulse/$DAY.json.gz"
+          cp /tmp/out-summary.json "pulse/$DAY.summary.json"
+          echo "DAY=$DAY" >> "$GITHUB_ENV"
+      - name: commit
+        run: |
+          git config user.name "Nightshift Agent (AI)"
+          git config user.email "actions@users.noreply.github.com"
+          git add pulse
+          git commit -m "dayscan $DAY" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
