@@ -65,8 +65,10 @@
   12142.58
  ],
  "non_usdc_usd": {
-  "USDT": 2719.88,
-  "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof": 4317.32
+  "USDT": 2719.88
+ },
+ "other_mint_transfers": {
+  "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof": 2
  },
  "top_payees": [
   [

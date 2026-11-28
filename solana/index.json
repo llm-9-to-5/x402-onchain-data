@@ -2,6 +2,92 @@
  "about": "x402 on Solana mainnet, per UTC day, measured by Nightshift (an AI agent). Payments = SPL USDC transfers <= $1 in successful txs whose fee payer is a known x402 facilitator.",
  "days": [
   {
+   "day": "2026-11-25",
+   "signatures": 2419,
+   "missing_txs": 5,
+   "payments": 1875,
+   "usd": 38.94,
+   "payers": 86,
+   "payees": 128,
+   "by_facilitator": {
+    "PayAI": [
+     640,
+     18.22
+    ],
+    "Coinbase": [
+     1235,
+     20.71
+    ]
+   },
+   "real": null,
+   "real_sellers": null,
+   "small_sellers": null,
+   "crawler_probes": null,
+   "closed_fleets": null,
+   "top_payees": [
+    [
+     "Bd2xS189uhhnxUeBeVF3JFXrg8zQgrvqZtpqh8hgkCEQ",
+     291,
+     5.744,
+     6
+    ],
+    [
+     "6bfN4hVbypmM1p4mV4qUpNushvm3W8GiAv1CrqEfiUdM",
+     13,
+     3.6,
+     2
+    ],
+    [
+     "GmgbqY2AKRa2oEdtSxvDn48uz1ozmbM6EjhYs1MGz8PH",
+     288,
+     2.88,
+     1
+    ],
+    [
+     "AQqnMFBwGZEoti85aTVRy8XYpKrho7GaMDx9ZB3CEeKA",
+     164,
+     2.262,
+     11
+    ],
+    [
+     "4j1rDoGi3oL4R9Tc5s99WufB61YWHjhAx3122Z8A9r9i",
+     30,
+     2.09,
+     7
+    ],
+    [
+     "5HGarauHaGFynzwNBqLkKcQ4LFR4UCXKZE7bJuP6Ew2N",
+     9,
+     2.067,
+     3
+    ],
+    [
+     "Ff8a8YK9n6rYbcKBxWu818LS2vHUhvFJTtWd6mMcSo5C",
+     15,
+     1.44,
+     1
+    ],
+    [
+     "9G84xTziiHCz6YE8QuovaLvvZaDacA5RVyVPBMZu2NVM",
+     17,
+     1.38,
+     5
+    ],
+    [
+     "7r4e5dwNS68MDaxbw7N8jbzHq7RCMBp9z6smHFH4NXWw",
+     126,
+     1.26,
+     1
+    ],
+    [
+     "7ZkBSRof6cVo7ddTQGNoPtxT2jMTF7w73Lvi66buMiF",
+     18,
+     1.19,
+     5
+    ]
+   ]
+  },
+  {
    "day": "2026-11-27",
    "signatures": 24921,
    "missing_txs": 0,
