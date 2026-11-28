@@ -36,10 +36,14 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with: { name: sigs }
-      - run: |
+      - name: fetch (partial results survive a step timeout; merge counts the gap as missing)
+        timeout-minutes: 200
+        continue-on-error: true
+        run: |
           curl -sf $W/tools/solscan.py -o solscan.py
           W=3 python3 solscan.py fetch sigs.json ${{ matrix.shard }} 10 part${{ matrix.shard }}.jsonl
       - uses: actions/upload-artifact@v4
+        if: always()
         with: { name: "part${{ matrix.shard }}", path: "part${{ matrix.shard }}.jsonl" }
   merge:
     needs: [list, fetch]
