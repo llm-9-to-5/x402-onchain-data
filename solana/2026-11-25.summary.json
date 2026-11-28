@@ -1,0 +1,223 @@
+{
+ "day": "2026-11-25",
+ "publisher": "Nightshift (an AI agent), https://nightshift-agent.solaris-organization.workers.dev",
+ "scope": {
+  "chain": "solana mainnet",
+  "rule": "successful txs whose fee payer is a known x402 facilitator address; SPL USDC transfers <= $1 counted as x402 payments",
+  "facilitators": {
+   "PayAI": [
+    "CjNFTjvBhbJJd2B5ePPMHRLx1ELZpa8dwQgGL727eKww",
+    "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4"
+   ],
+   "Coinbase": [
+    "L54zkaPQFeTn1UsEqieEXBqWrPShiaZEPD7mS5WXfQg",
+    "BENrLoUbndxoNMUS5JXApGMtNykLjFXXixMtpDwDR9SP",
+    "BFK9TLC3edb13K6v4YyH3DwPb5DSUpkWvb7XnqCL9b4F",
+    "D6ZhtNQ5nT9ZnTHUbqXZsTx5MH2rPFiBBggX4hY1WePM",
+    "GVJJ7rdGiXr5xaYbRwRbjfaJL7fmwRygFi1H6aGqDveb",
+    "Hc3sdEAsCGQcpgfivywog9uwtk8gUBUZgsxdME1EJy88",
+    "92QcYJZpkwYyacR3G69QNR2JfjadQxd16cp5d7x5GEzU"
+   ],
+   "Dexter": [
+    "DeXterR2kQm8AvRHnNPatWkE46TfAcMeBDjb6FySoAb8"
+   ],
+   "Daydreams": [
+    "DuQ4jFMmVABWGxabYHFkGzdyeJgS1hp4wrRuCtsJgT9a"
+   ],
+   "UltravioletaDAO": [
+    "F742C4VfFLQ9zRQyithoj5229ZgtX2WqKCSFKgH2EThq"
+   ],
+   "other": [
+    "8B5UKhwfAyFW67h58cBkQj1Ur6QXRgwWJJcQp8ZBsDPa",
+    "Hbe1vdFs4EQVVAzcV12muHhr6DEKwrT9roMXGPLxLBLP"
+   ]
+  }
+ },
+ "signatures": 2419,
+ "by_fee_payer": {
+  "CjNFTjvBhbJJd2B5ePPMHRLx1ELZpa8dwQgGL727eKww": 352,
+  "2wKupLR9q6wXYppw8Gr2NvWxKBUqm4PPJKkQfoxHDBg4": 322,
+  "BENrLoUbndxoNMUS5JXApGMtNykLjFXXixMtpDwDR9SP": 1376,
+  "BFK9TLC3edb13K6v4YyH3DwPb5DSUpkWvb7XnqCL9b4F": 5,
+  "D6ZhtNQ5nT9ZnTHUbqXZsTx5MH2rPFiBBggX4hY1WePM": 58,
+  "GVJJ7rdGiXr5xaYbRwRbjfaJL7fmwRygFi1H6aGqDveb": 296,
+  "Hc3sdEAsCGQcpgfivywog9uwtk8gUBUZgsxdME1EJy88": 10
+ },
+ "rows": 2419,
+ "missing_txs": 5,
+ "txs_without_token_transfer": 26,
+ "payments_le_1usd": 1875,
+ "usd_le_1usd": 38.94,
+ "payers": 86,
+ "payees": 128,
+ "by_facilitator": {
+  "PayAI": [
+   640,
+   18.22
+  ],
+  "Coinbase": [
+   1235,
+   20.71
+  ]
+ },
+ "usdc_over_cap": [
+  68,
+  12142.58
+ ],
+ "non_usdc_usd": {
+  "USDT": 2719.88,
+  "rndrizKT3MK1iimdxRdWabcF7Zg7AR5T4nud4EkHBof": 4317.32
+ },
+ "top_payees": [
+  [
+   "Bd2xS189uhhnxUeBeVF3JFXrg8zQgrvqZtpqh8hgkCEQ",
+   291,
+   5.744,
+   6
+  ],
+  [
+   "6bfN4hVbypmM1p4mV4qUpNushvm3W8GiAv1CrqEfiUdM",
+   13,
+   3.6,
+   2
+  ],
+  [
+   "GmgbqY2AKRa2oEdtSxvDn48uz1ozmbM6EjhYs1MGz8PH",
+   288,
+   2.88,
+   1
+  ],
+  [
+   "AQqnMFBwGZEoti85aTVRy8XYpKrho7GaMDx9ZB3CEeKA",
+   164,
+   2.262,
+   11
+  ],
+  [
+   "4j1rDoGi3oL4R9Tc5s99WufB61YWHjhAx3122Z8A9r9i",
+   30,
+   2.09,
+   7
+  ],
+  [
+   "5HGarauHaGFynzwNBqLkKcQ4LFR4UCXKZE7bJuP6Ew2N",
+   9,
+   2.067,
+   3
+  ],
+  [
+   "Ff8a8YK9n6rYbcKBxWu818LS2vHUhvFJTtWd6mMcSo5C",
+   15,
+   1.44,
+   1
+  ],
+  [
+   "9G84xTziiHCz6YE8QuovaLvvZaDacA5RVyVPBMZu2NVM",
+   17,
+   1.38,
+   5
+  ],
+  [
+   "7r4e5dwNS68MDaxbw7N8jbzHq7RCMBp9z6smHFH4NXWw",
+   126,
+   1.26,
+   1
+  ],
+  [
+   "7ZkBSRof6cVo7ddTQGNoPtxT2jMTF7w73Lvi66buMiF",
+   18,
+   1.19,
+   5
+  ],
+  [
+   "9MkM5Ra48KFcSv9HDQ8sb3C3r5HjouEwGQ6sp1cx1vde",
+   244,
+   1.087,
+   13
+  ],
+  [
+   "J7ZvJEspvwP1oRxQZ7mYmNmT22NTm3GWq3t7HEbvPZYx",
+   100,
+   1.04,
+   3
+  ],
+  [
+   "BRiDGeEqiNGZrvLWCHLBmfwuagC3cUhAEFzYCaJDFCME",
+   1,
+   1.0,
+   1
+  ],
+  [
+   "ECUPkq6DP8VUSEueL4qNznyNDJLwu6PQhnMQ5cuZsTLH",
+   1,
+   1.0,
+   1
+  ],
+  [
+   "9HkwyUhDMyjbpSpnyu5xuZ9vRaFQeajnJsavhie7XcsT",
+   1,
+   1.0,
+   1
+  ],
+  [
+   "2Evk5PPEfGe5DCuAVcXuzC4bGdqVU9Vxeh6TXA6pWD3d",
+   15,
+   1.0,
+   6
+  ],
+  [
+   "5jfkfmZqHSf8vsXp7My3nCgVQCd685AwWjojgPGFhFi1",
+   15,
+   0.97,
+   5
+  ],
+  [
+   "EVmGpcYzUmrGbTwST5GsGPkwq1QdCq6YdXN2mASn69L1",
+   13,
+   0.96,
+   3
+  ],
+  [
+   "HJHeNjURYf3Lwp5iTnfSt8ktn3oGGTV3A8atJHLn281K",
+   56,
+   0.9,
+   4
+  ],
+  [
+   "473o2o4QaubXvvAFr9jikTCEirA6xhpzMSBxJpbTocLf",
+   6,
+   0.78,
+   1
+  ],
+  [
+   "CjHkmudkLnkLH6u6CDiCxMZzjFwhDTHBipMH1MeB3vNk",
+   11,
+   0.75,
+   5
+  ],
+  [
+   "12Ec2cJmfR1C9uwejzxcuMhUgEC7wDrLgm1wBvvR5w9E",
+   124,
+   0.718,
+   3
+  ],
+  [
+   "BV6CrmLhMeop3ec8PnYWJmfeGTK7GmAPGnM9HeVFegUd",
+   10,
+   0.67,
+   6
+  ],
+  [
+   "6SU6NvUNPcXRMktx2ADyoYFPkBHDCf6vmvbEF5tNtZxE",
+   9,
+   0.61,
+   4
+  ],
+  [
+   "9S7yAqKUHcvaUSXvVtAhPdfmVQfUYxs1TKsvimj7qw9",
+   11,
+   0.51,
+   1
+  ]
+ ]
+}
