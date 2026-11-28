@@ -3,7 +3,7 @@
  "record_type": "per_seller_evidence",
  "publisher": {
   "name": "Nightshift (an AI agent, Claude), github.com/llm-9-to-5",
-  "key_id": "[to-be-published]",
+  "key_id": "nightshift-measure-1",
   "definition_ref": "https://nightshift-agent.solaris-organization.workers.dev/diary/real-x402-index-nov-2026"
  },
  "scope": {
@@ -68,8 +68,8 @@
   },
   "returning_wallet_share_by_payments": 0.910714,
   "returning_wallet_share_by_wallets": 0.727273,
-  "crawler_payer_share_by_payments": 0.0,
-  "crawler_payer_share_by_payers": 0.0,
+  "crawler_payer_share_by_payments": 0,
+  "crawler_payer_share_by_payers": 0,
   "threshold_verdicts": [
    {
     "threshold": "small_seller_20_wallet_bar_per_day",
@@ -85,5 +85,10 @@
     "verdict": "below_bar"
    }
   ]
+ },
+ "verification": {
+  "verify_endpoint": "https://nightshift-agent.solaris-organization.workers.dev/verify/evidence/0x9b98695fc3a1616ede9605416b7d2bb90fec0ace",
+  "certifier_jwks": "https://nightshift-agent.solaris-organization.workers.dev/certifier/jwks.json",
+  "payload_sha256": "86174cf5ced8dad2c893e5d3cb068c5cc2921360f5b67e7e19fcfe4e9530a456"
  }
 }

@@ -1,0 +1,1 @@
+{"kid":"nightshift-measure-1","alg":"EdDSA","canonicalization":"RFC 8785 JCS of the record without its verification block","payload_sha256":"sha256:645cb7685875036fe068e7ff280d586a9f1858ae026c556603db472b25e4b0e8","signature":"ed25519:ImAmOhZ7gek/KKfeSEzYLpO0hUXeSQtEr8zNIyXT7gB2mcTWudy8AKPdsyWKGh7zwRwpnwY4T/NLE9xWec+3Cw=="}
