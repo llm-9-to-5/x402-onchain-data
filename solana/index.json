@@ -88,6 +88,92 @@
    ]
   },
   {
+   "day": "2026-11-26",
+   "signatures": 37108,
+   "missing_txs": 41,
+   "payments": 36520,
+   "usd": 102.41,
+   "payers": 93,
+   "payees": 127,
+   "by_facilitator": {
+    "PayAI": [
+     22460,
+     41.2
+    ],
+    "Coinbase": [
+     14060,
+     61.22
+    ]
+   },
+   "real": 0,
+   "real_sellers": 0,
+   "small_sellers": 100.86,
+   "crawler_probes": 1.55,
+   "closed_fleets": 0,
+   "top_payees": [
+    [
+     "3Wuj6VjJXuCmQZjGRhW56xbEk6TzCyMEUVRZgLBYNE2Z",
+     12675,
+     38.025,
+     2
+    ],
+    [
+     "AQqnMFBwGZEoti85aTVRy8XYpKrho7GaMDx9ZB3CEeKA",
+     22091,
+     28.4451,
+     12
+    ],
+    [
+     "Bd2xS189uhhnxUeBeVF3JFXrg8zQgrvqZtpqh8hgkCEQ",
+     649,
+     12.923,
+     15
+    ],
+    [
+     "8EgACpZ16XWEt7YjJPsh1ZheVRZUGmmwQ8nJdmA1o5w4",
+     94,
+     3.3412,
+     1
+    ],
+    [
+     "GmgbqY2AKRa2oEdtSxvDn48uz1ozmbM6EjhYs1MGz8PH",
+     288,
+     2.88,
+     1
+    ],
+    [
+     "5HGarauHaGFynzwNBqLkKcQ4LFR4UCXKZE7bJuP6Ew2N",
+     39,
+     2.142,
+     2
+    ],
+    [
+     "J7ZvJEspvwP1oRxQZ7mYmNmT22NTm3GWq3t7HEbvPZYx",
+     118,
+     1.26,
+     6
+    ],
+    [
+     "AuBsRDd6aFyBb5HxZyrCT7QcAiuqbk67AwJaCXtywV8q",
+     1,
+     1.0,
+     1
+    ],
+    [
+     "ECUPkq6DP8VUSEueL4qNznyNDJLwu6PQhnMQ5cuZsTLH",
+     1,
+     1.0,
+     1
+    ],
+    [
+     "FAox6C2KsCeq1ZL9pBxjtgi54j1aQPQz2GXkwyrTtVnE",
+     1,
+     0.99,
+     1
+    ]
+   ]
+  },
+  {
    "day": "2026-11-27",
    "signatures": 24921,
    "missing_txs": 0,
@@ -105,11 +191,11 @@
      32.48
     ]
    },
-   "real": null,
-   "real_sellers": null,
-   "small_sellers": null,
-   "crawler_probes": null,
-   "closed_fleets": null,
+   "real": 0,
+   "real_sellers": 0,
+   "small_sellers": 65.53,
+   "crawler_probes": 1.55,
+   "closed_fleets": 0,
    "top_payees": [
     [
      "AQqnMFBwGZEoti85aTVRy8XYpKrho7GaMDx9ZB3CEeKA",

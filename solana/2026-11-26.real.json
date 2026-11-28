@@ -1,8 +1,18 @@
 {
  "day": "2026-11-26",
- "note": "no previous day file: closed-fleet rule needs it",
- "chain": "solana",
+ "total": 102.41,
+ "ax1_contest": 0,
+ "crawler_probes": 1.55,
+ "small_sellers": 100.86,
+ "closed_fleets": 0,
+ "one_pay_per_wallet": 0,
+ "real": 0,
+ "real_sellers": 0,
+ "real_wallets": 0,
+ "real_share": 0,
+ "top_real": [],
  "source": "solscan",
+ "chain": "solana",
  "crawlers": [
   {
    "wallet": "9VaAPD1CPE4i8pquaRwE7LvZXMmvGdgffD4Q8xJgaQRu",
